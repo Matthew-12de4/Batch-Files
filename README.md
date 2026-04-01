@@ -33,7 +33,7 @@ timeout /t 5 /nobreak > nul
 > :memo: **Note:** <font color ="red">Shortcut Incompatible.</font>
 
 #### What It Does
-Once placed in a remote git repository it will prompt you for a commit message and if you set up github cli correctly it will push all changes to your remote
+Once placed in a remote git repository it will prompt you for a commit message and if you set up github cli correctly it will push all changes to your remote then show you what you uploaded
 #### Uses
 Easier than github desktop for when you just want to commit your changes and quicker than git bash
 
@@ -45,4 +45,10 @@ git add -A
 set /p commitMsg=Commit Message: 
 git commit -m "%commitMsg%"
 git push
+echo:
+echo All Changes Have Been Commited
+echo:
+git log -1 --stat
+echo Closing in 5...
+timeout /t 5 /nobreak > nul
 ```
